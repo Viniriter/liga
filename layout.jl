@@ -1,29 +1,55 @@
-import Base.show
+function arvore(v,niv,pos,lista,n)
+    if niv<=n 
+        if pos==0
+            aux=copy(v)
+            aux[niv]=true 
+            niv=niv+1
+            lista=push!(lista,aux)
+            lista=arvore(aux,niv,0,lista,n) 
+            lista=arvore(aux,niv,1,lista,n) 
+            
+        else
+            niv=niv+1
+            aux=copy(v)
+            lista=arvore(aux,niv,0,lista,n)
+            lista=arvore(aux,niv,1,lista,n)
+            
+        end    
+    end
+    return lista
+end
+
+function buildtree(n)
+   v=falses(n)
+   lista=[v]
+   for i in arvore(v,1,0,[v],n)[2:length(arvore(v,1,0,[v],n))]
+        lista=push!(lista,i)
+   end     
+   for i in arvore(v,1,1,[v],n)[2:length(arvore(v,1,1,[v],n))]
+        lista=push!(lista,i)
+   end
+   return lista
+end
 
 function layout(dim::Int)
-    stf=readdlm("setup.dat")
-    obj="objects.jl"
-    f=open(obj,"w")
-    println(f, "const n= $dim")
-    println(f,"const bblade=$(stf[:,1])")
-    println(f,"const bbval=$(stf[:,2])")
-    mvtype="MultiVectorType"
-    println(f,"abstract type $(mvtype) end")
-    println(f,"struct MVec <: $(mvtype)")
-    println(f,"coord::Array{Float64,1}")
-    println(f,"end")
-    println(f,"  ")
-    println()
-    println(f,"function Base.show(io::IO,mv::MVec)")
-    println(f,"for i=1:2^n")
-    println(f,"if mv.coord[i]>0")
-    println(f,"   print(io,string( + ),mv.coord[i],bblade[i] )")
-    println(f,"end")
-    println(f,"if mv.coord[i]<0")
-    println(f,"   print(io,string( ),mv.coord[i],bblade[i] )")
-    println(f,"end")
-    println(f,"end")
-    println(f,"end")
-    close(f)
-    include(obj)
+#gerar todos os binarios
+bn=buildtree(dim)
+#
+obj="objects.jl"
+f=open(obj,"w")
+#saida=Dict{Symbol,Int64}()
+for v in bn
+    s=find(x->x==true,v)
+    if isempty(s)
+        println(f,"const id = $v")
+    else     
+        conc=string(s[1])
+        for k=2:length(s)
+            conc=string(conc,s[k])
+        end
+        println(f,"const e$(conc) = $v")
+    end
+end
+close(f)
+include("objects.jl")
 end
