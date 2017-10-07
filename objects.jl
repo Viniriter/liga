@@ -1,0 +1,8 @@
+const id = Bool[false, false, false]
+const e1 = Bool[true, false, false]
+const e12 = Bool[true, true, false]
+const e123 = Bool[true, true, true]
+const e13 = Bool[true, false, true]
+const e2 = Bool[false, true, false]
+const e23 = Bool[false, true, true]
+const e3 = Bool[false, false, true]
