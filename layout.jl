@@ -30,7 +30,14 @@ function buildtree(n)
    end
    return lista
 end
+""" This function is used to define the space to work 
+## Example
+```julia-repl
+julia> layout(3)
+```
+generates a G3 space with base 1,e1,e2,e3,e12,e13,e23,e123
 
+"""
 function layout(dim::Int)
 #gerar todos os binarios
 bn=buildtree(dim)
