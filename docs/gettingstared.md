@@ -39,7 +39,8 @@ All bases elements were created using this idea. Try type others basis elements
     
      e123
 
-     e12          
+     e12       
+        
 An  observation in this case is the order of these elements are important. If you type
 
      e21
