@@ -15,7 +15,7 @@ and reseachers interesting in use (and programming) a Geometric Algebra
 framework. All scripts were made in [Julia language](www.julialang.org), 
 version 0.6. 
 
-It's important a previous contact with Geometric Algebra in theoritical aspects.
+It's important a previous contact with Geometric Algebra in theoretical aspects.
  In this sense, we recommend the following references:
 
 1. Christian Perwass, *Geometric Algebra with Applications in Engineering*, 
