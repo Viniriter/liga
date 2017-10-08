@@ -7,6 +7,6 @@ A good review of *State of Art* can be found in
 
 ...
 
-A full documentation can be found [here](evcastelani.github.io/liga).
+A full documentation can be found [here](https://evcastelani.github.io/liga/).
 
  
