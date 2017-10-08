@@ -42,10 +42,10 @@ All bases elements were created using this idea. Try type others basis elements
     $ e12          
 An  observation in this case is the order of these elements are important. If you type
 
-    $e21
+    $ e21
 
 an error mensage is showed. This does not mean that this element can not be built. We will see this later. Reciprocally, type
 
-    $kbase([true,true,false])
+    $ kbase([true,true,false])
 
 This command show the multivector ```e12```. Another important property is...    
