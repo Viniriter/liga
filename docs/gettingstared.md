@@ -27,7 +27,9 @@ an ```objects.jl```. The ```objects.jl``` generates a basis for some space that 
 
 	 layout(3)
 
-we are generating  the G3 space, that is, we are generating a basis of vectors and multivectors for G3. Now, was created bases elements in ```objects.jl```. Type, for example
+we are generating  the G3 space as default, that is, we are generating a basis of vectors and multivectors for G3. But, we can work (with appropriated setup of elements),with G3,1 and G4,1. 
+
+Let us started with more basic example. After type ```layout(3)```  was created bases elements in ```objects.jl```. Type, for example
 
      e1
 
