@@ -48,6 +48,17 @@ An  observation in this case is the order of these elements are important. If yo
 
 an error mensage is showed. This does not mean that this element can not be built. We will see this later. Reciprocally, type
 
-     kbase([true,true,false])
+     kb([true,true,false])
 
-This command show the multivector ```e12```. Another important property is...    
+This command show the multivector ```e12```. So ```kb``` is abbreviation of *k-basis element* and if we think in pratical purposes, it is just a logical vector. 
+Another important property is ```kb``` supports a scalar argument with the basis element. For example,
+
+    -2.3e12
+
+is equal to type
+
+    kb([true,true,false],-2.3)
+
+All these commands provide the basics for starting more elaborate constructions in the space that has been defined. 
+
+Consequently, we recommend that the reader calmly review documentation on the types defined.        
