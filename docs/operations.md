@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Operations
+title: G(k) Space
 navigation: 4
 ---
 
