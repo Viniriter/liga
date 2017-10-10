@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projective Space
+title: Projective Space (G(k,1))
 navigation: 5
 ---
 
