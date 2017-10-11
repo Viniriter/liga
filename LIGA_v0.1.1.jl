@@ -532,6 +532,11 @@ function outer(A::kMultvec, B::kMultvec)
 	end
 end
 #########################################################
+"""
+
+For ```^(A::kMultvec,B::kMultvec)``` it is equal outer product.
+
+"""
 function Base.:^(A::kMultvec,B::kMultvec)
     return outer(A,B)
 end
