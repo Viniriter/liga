@@ -8,7 +8,7 @@ navigation: 4
 
 The Euclidean geometric algebra Gₖ space is the basic space of this project. The main operations of the space, that is, the _Clifford_ or _geometric_ product, the _inner_, _outer_ and _scalar_ products, the _reverse_, _dual_, _projection_ and _rejection_ of elements of this space are programmed and ready for use.
 
-To create an element of this space is necessary to call the ___types___ wich have only elements of type ```kb``` in their composition, that is, the elements of the _type_ ```kb``` itself, the ```kMultvec``` and the ```kblade``` _types_.
+To create an element of this space is necessary to call the ___types___ which have only elements of type ```kb``` in their composition, that is, the elements of the _type_ ```kb``` itself, the ```kMultvec``` and the ```kblade``` _types_.
 
 For now, only elements of the same _type_ can be operated, however, it is possible to convert elements of the _type_ ```kb``` and ```kblade``` into elements of the _type_ ```kMultvec``` and thus apply the operations that will be described, these operations and necessary conversions will be explained below.
 
@@ -38,13 +38,13 @@ and this will also return an element of the _type_ ```kMultvec```.
 ### Operations
 
 #### Grade - ```grade(a)```
-The _grade_ _function_ take as _input_ an element of the _type_ ```kb``` and return its grade wich is an element of the _type_ ```Int```, it's used more as an auxiliary _function_.
+The _grade_ _function_ take as _input_ an element of the _type_ ```kb``` and return its grade which is an element of the _type_ ```Int```, it's used more as an auxiliary _function_.
 
      grade(a::kb)
 
 #### Geometric Product - ```geoprod(a,b)``` or ```a ∘ b```
 
-Before start the explanation of the following operations it's important to note that the _output_ parameters os these _functions_ are of the same _type_ as _input_, except in the case of ```kblade```, wich in both case will return an element of _type_ ```kMultvec```.
+Before start the explanation of the following operations it's important to note that the _output_ parameters of these _functions_ are of the same _type_ as _input_, except in the case of ```kblade```, which in both case will return an element of _type_ ```kMultvec```.
 
 As in the literature, the _Clifford_ or _geometric product_ is the main operation of the space, and is the basis for most of the other operations. It takes two elements of the _type_ ```kb```, ```kMultvec``` or ```kblade``` and return their _geometric product_.
 
@@ -217,7 +217,7 @@ Another way to do this is by calling the element before the _function_
 
      a = kb(e123, -2.3)
 
-and then use de grade _function_
+and then use the grade _function_
 
      grade(a)
 
@@ -321,7 +321,7 @@ the same will happen for the other operations
 
      B ^ C
 
-retruns
+returns
 
      0.0
 
